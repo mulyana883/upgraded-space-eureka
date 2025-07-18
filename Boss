@@ -1,0 +1,21 @@
+def greet(self):
+    return f"Halo, saya {self.name}. Ada yang bisa saya bantu?"
+
+def process_input(self, user_input):
+    # Logika sederhana untuk menanggapi input pengguna
+    if "nama" in user_input.lower():
+        return f"Nama saya adalah {self.name}."
+    elif "hai" in user_input.lower() or "halo" in user_input.lower():
+        return "Hai juga! Senang bertemu denganmu."
+    else:
+        return "Maaf, saya belum paham maksudnya. Bisa dijelaskan lagi?"
+
+def start(self):
+    print(self.greet())
+    while True:
+        user_input = input("Anda: ")
+        if user_input.lower() in ["keluar", "exit", "quit"]:
+            print("Sampai jumpa!")
+            break
+        response = self.process_input(user_input)
+        print(f"{self.name}: {response}")
